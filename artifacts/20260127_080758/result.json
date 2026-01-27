@@ -1,0 +1,25 @@
+{
+  "inputs": {
+    "N": 200,
+    "B": 1000,
+    "beta0": 1.0,
+    "beta1": 2.0,
+    "x_sigma": 1.0,
+    "eps_sigma": 1.0,
+    "seed": 42,
+    "parallel": false,
+    "n_jobs": 1
+  },
+  "outputs": {
+    "beta_hat": [
+      1.0176054820225833,
+      1.9188153110269877
+    ],
+    "se_boot_beta1": 0.07949489360030974
+  },
+  "meta": {
+    "timestamp_utc": "2026-01-27T07:07:58.881037+00:00",
+    "runtime_ms": 41,
+    "python_version": "3.13.7"
+  }
+}
