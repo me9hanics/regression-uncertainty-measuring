@@ -1,0 +1,25 @@
+[project]
+name = "riskmeasures"
+version = "0.1.0"
+description = "Package for risk measurement models + utils"
+readme = "README.md"
+authors = [{name="Mihaly Hanics"}]
+requires-python = ">=3.12"
+dependencies = [
+ "ipykernel",
+ "joblib>=1.5.3",
+ "numpy",
+]
+
+[project.optional-dependencies]
+dev = [
+ "pip",
+ "pytest",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+ 
+[tool.setuptools.packages.find]
+where = ["src"]

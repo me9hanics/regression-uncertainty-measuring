@@ -1,0 +1,14 @@
+.venv/
+.vscode/
+.pytest_cache/
+build/
+uv.lock
+__pycache__/
+*.pyc
+
+#artifacts/
+~*
+*.egg-info/
+_temp*
+#.gitignore
+assignment.md
