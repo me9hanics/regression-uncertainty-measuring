@@ -4,6 +4,8 @@ This repo stores the codes for the solutions to the tasks AND other tools for fu
 
 While most of the focus is on the Python implementation, the specific tasks were also implemented in R (as convenience for the team). The below instructions focus on the Python package usage though.
 
+The solutions were first developed in Python, and then "recreated" in R.
+
 ---
 
 ## How to replicate - install etc. (Import lib)
