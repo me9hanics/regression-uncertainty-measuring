@@ -1,6 +1,6 @@
 #Statistical methods
 
-source(file.path(dirname(sys.frame(1)$ofile), "utils.R"))
+#source(file.path(dirname(sys.frame(1)$ofile), "utils.R"))
 
 estimate_beta <- function(data) {
 #' @param data Matrix with (x, y) pairs, shape (N, 2)
@@ -51,13 +51,11 @@ sample_std <- function(values) {
   sqrt(variance)
 }
 
-#' Estimate standard error of OLS slope using bootstrap resampling
-#'
+bootstrap_beta <- function(data, B, seed = NULL) {
 #' @param data Matrix with (x, y) pairs, shape (N, 2)
 #' @param B Number of bootstrap samples (integer >= 2)
 #' @param seed Optional random seed for reproducibility
 #' @return Estimated standard error of the slope coefficient
-bootstrap_beta <- function(data, B, seed = NULL) {
   data <- validate_xy_data(data, min_rows = 2)
   if (!is.numeric(B) || length(B) != 1 || is.na(B) || B %% 1 != 0 || B < 2) {
     stop("B must be an integer >= 2")

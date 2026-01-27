@@ -1,4 +1,4 @@
-# Utility functions (e.g. input validation)
+#Utility functions (e.g. input validation)
 
 validate_xy_data <- function(data, min_rows = 2) {
 #' @param data Matrix or data.frame with (x, y) pairs

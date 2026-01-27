@@ -1,7 +1,9 @@
 #Simulate data according to the linear regression model:
 # y_i = beta_0 + beta_1 * x_i + epsilon_i
 #where x_i ~ N(0, x_sigma^2) and epsilon_i ~ N(0, epsilon_sigma^2)
-source(file.path(dirname(sys.frame(1)$ofile), "utils.R"))
+
+#source(file.path(dirname(sys.frame(1)$ofile), "utils.R"))
+
 simulate_data <- function(N,
                           beta_0 = 1,
                           beta_1 = 2,

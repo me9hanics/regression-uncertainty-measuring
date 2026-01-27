@@ -5,10 +5,14 @@ build/
 uv.lock
 __pycache__/
 *.pyc
+*.egg-info/
+_temp*
+.Rproj.user
+.Rhistory
 
 #artifacts/
 ~*
-*.egg-info/
-_temp*
 #.gitignore
 assignment.md
+artifacts/202*
+
