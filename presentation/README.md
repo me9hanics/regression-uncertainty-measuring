@@ -81,6 +81,12 @@ Simple approach:
 
 ---
 
+## Distribution
+
+![Beta values histogram](images/bootstrap_betas_hist.png)
+
+(very normally distributed)
+
 ## Standard deviation
 
 **Python:**
