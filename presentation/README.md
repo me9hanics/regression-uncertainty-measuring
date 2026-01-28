@@ -14,9 +14,11 @@ Implemented:
 ## Simulate data
 
 **Python:**
+
 ![Python simulation code](images/simulate-data-code.png)
 
 **R:**
+
 ![R simulation code](images/simulate-data-code-R.png)
 
 - Instead of just sigma, had `sigma_x` and `sigma_epsilon` for generality
@@ -45,9 +47,11 @@ Implemented:
 Simple approach:
 
 **Python:**
+
 ![Python beta estimation](images/estimate-beta-code.png)
 
 **R:**
+
 ![R beta estimation](images/estimate-beta-code-R.png)
 
 ---
@@ -65,9 +69,11 @@ Simple approach:
 ## Bootstrap sampling
 
 **Python:**
+
 ![Python bootstrap samples](images/bootstrap-samples-code.png)
 
 **R:**
+
 ![R bootstrap samples](images/bootstrap-samples-code-R.png)
 
 - Vectorized implementation
@@ -78,9 +84,11 @@ Simple approach:
 ## Standard deviation
 
 **Python:**
+
 ![Python standard deviation code](images/sample-std-code.png)
 
 **R:**
+
 ![R standard deviation code](images/sample-std-code-R.png)
 
 ---
@@ -88,9 +96,11 @@ Simple approach:
 ## Beta standard error from bootstrap
 
 **Python:**
+
 ![Python bootstrap beta](images/bootstrap-beta-code.png)
 
 **R:**
+
 ![R bootstrap beta](images/bootstrap-beta-code-R.png)
 
 ---
@@ -125,9 +135,11 @@ Using **Joblib** for multiprocessing and multithreading:
 ## Input sanity checks
 
 **R:**
+
 ![R sanity checks](images/sanity-check-funcs-R.png)
 
 **Python:**
+
 ![Python sanity checks 1](images/sanity-check-funcs.png)
 ![Python sanity checks 2](images/sanity-check-funcs-2.png)
 
