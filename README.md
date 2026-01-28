@@ -4,48 +4,59 @@ This repo stores the codes for the solutions to the tasks AND other tools for fu
 
 While most of the focus is on the Python implementation, the specific tasks were also implemented in R (as convenience for the team). The below instructions focus on the Python package usage though.
 
-The solutions were first developed in Python, and then "recreated" in R.
+The solutions were first developed in Python, and then "recreated" in R.<br>
+Python code can be found in `src/riskmeasures/`, R code in `src/riskmeasures-R/`.
 
 ---
 
-## How to replicate - install etc. (Import lib)
+## How to: replicate, install etc.
 
+### R
+1. Download the repository
+2. Open its root path in RStudio as a new project
+Optional: for the *experimental* CLI running,
+
+### Python
 1. Download the repository
 2. Open its root path in a terminal
-3. Create a virtual environment using the `pyproject.toml` file, I recommend using `uv`:
+3. Create a virtual environment from the `pyproject.toml` file, I recommend using `uv`:
    ```bash
    uv venv
    ```
+   (`uv` automatically detects the `pyproject.toml` file.)
 4. Activate the venv:
    - **Windows:** `.venv\Scripts\activate`
    - **Linux/Mac:** `source .venv/bin/activate`
-5. Install the package in editable mode:
+5. Install the package (optionally in editable mode):
    ```bash
    uv pip install -e .
    ```
 
 ---
 
-## Example usage - Quick start, CLI
+## Quick start, Example usage with CLI
 
-You can run the full pipeline from the command line interface (CLI). An example command is:
+You can run the full pipeline simply from the command line. Just open it and run e.g.:
 
 ```bash
 python -m riskmeasures.cli --N 10000 --B 1000 --x-sigma 1.0 --eps-sigma 1.0 --seed 17 --log
 ```
 
-then check the `artifacts/` folder for outputs.
+then check the `artifacts/` folder for outputs (results, data and input parameters all stored).
+
+<br>The R version would use the `riskmeasures-R/cli.R` script, however currently the CLI argument parsing is buggy.
+
 ---
 
 ## Parallelization
 
-For the pipeline using `--parallel --n-jobs 6`, and in `bootstrap_beta`, multiprocesssing can be used.
+The pipeline can be parallelized, using `--parallel --n-jobs 6` (change number), these are arguments for `bootstrap_beta`. This utilizes multiprocesssing.
 
 ---
 
 ## Seeds
 
-To ensure reproducibility, you can use random seeds with `--seed`, similarly for most functions.
+To ensure reproducibility, you can use fixed random seeds with `--seed`, similarly for most functions.
 
 ---
 
