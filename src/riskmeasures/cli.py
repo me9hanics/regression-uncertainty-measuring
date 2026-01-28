@@ -6,7 +6,7 @@ Example usage:
         --N 200 --B 1000
         --beta0 1 --beta1 2
         --x-sigma 1 --eps-sigma 1
-        --seed 17
+        --seed 17 --log
         --out artifacts/result.json
         --save-data artifacts/data.csv
         --parallel --n-jobs 4
@@ -124,7 +124,7 @@ def main(argv: Optional[list[str]] = None) -> int:
         log.error("Input validation error: %s", e)
         return 2
 
-    t0 = time.perf_counter()
+    t0 = time.perf_counter() #For logging
     
     #--log: timestamped directory setup
     if args.log:

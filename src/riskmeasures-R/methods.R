@@ -8,10 +8,10 @@ estimate_beta <- function(data) {
   data <- validate_xy_data(data, min_rows = 2)
   x <- data[, 1]
   y <- data[, 2]
-  X <- cbind(1, x)
-  XtX <- crossprod(X)
-  Xty <- crossprod(X, y)
-  beta <- solve(XtX, Xty) #could also do: beta <- solve(t(X) %*% X) %*% t(X) %*% y
+  design <- cbind(1, x)
+  A_inv <- t(design)  %*% design
+  B <- t(design)  %*% y
+  beta <- solve(A_inv, B)
   as.numeric(beta)
 }
 
@@ -63,7 +63,7 @@ bootstrap_beta <- function(data, B, seed = NULL) {
   if (!is.null(seed)) {
     validate_and_set_seed(seed)
   }
-  samples <- bootstrap_samples(data, B = B, seed = NULL)  # seed already set above
+  samples <- bootstrap_samples(data, B = B, seed = NULL)
   
   betas <- vapply(seq_len(B), function(b) {
     estimate_beta(samples[b, , ])

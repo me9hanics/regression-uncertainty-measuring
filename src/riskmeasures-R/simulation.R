@@ -37,5 +37,5 @@ simulate_data <- function(N,
   epsilons <- rnorm(N, mean = 0, sd = epsilon_sigma)
   ys <- beta_0 + beta_1 * xs + epsilons
   
-  cbind(x = xs, y = ys)
+  cbind(x = xs, y = ys) #same as numpy column stack
 }
