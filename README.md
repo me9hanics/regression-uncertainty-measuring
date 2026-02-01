@@ -1,6 +1,8 @@
+# This repo is an example of how a package for (financial) regression models and measures might look like. It has been archived on 2026.02.01.
+
 # Assignment repository - regression uncertainty calculation in R and Python
 
-This repo stores the codes for the solutions to the tasks AND other tools for future usecases. It implements a linear model data generation function and measures, as a Python package. The repository design resembles a practical package design with codebase, CLI, "logging", tests, data artifacts and CI/CD.
+This repo stores basic functions for analyzing regression data, and tools for future usecases. It implements a linear model data generation function (`simulate_data`) and measures for OLS models, as a Python package. The repository design resembles a practical package design with codebase, CLI, "logging", tests, data artifacts and CI/CD.
 
 While most of the focus is on the Python implementation, the specific tasks were also implemented in R (as convenience for the team). The below instructions focus on the Python package usage though.
 
